@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALES ROCKET SR | Impulsora de Ventas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SALES ROCKET SR <span>v1.0</span></div>
+        <div class="nav-status">
+            <span class="status-indicator"></span> En línea
+            <button id="nav-bot-icon" onclick="toggleChat()" title="Abrir Asistente IA">
+                <i class="fas fa-robot"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="app-main-container">
+        <aside class="sidebar-menu">
+            <div class="menu-section-title">PROPIEDADES:</div>
+            
+            <button class="menu-item-btn" onclick="cargarSitio('https://eligiolayna01.nocnok.com', 'agente1', this)">
+                <i class="fas fa-search-location"></i> Catalogo 1
+            </button>
+
+            <div class="menu-section-title">SERVICIOS:</div>
+
+            <button class="menu-item-btn" onclick="cargarSitio('https://dradinstalaciones.com', 'agente2', this)">
+                <i class="fas fa-th-list"></i> Drad Ingenieria
+            </button>
+
+            <button class="menu-item-btn" onclick="cargarSitio('https://globalcontrol.mx', 'agente3', this)">
+                <i class="fas fa-th-list"></i> GlobalControl
+            </button>
+
+            <button class="menu-item-btn" onclick="cargarSitio('https://dradinstalaciones.com', 'agente4', this)">
+                <i class="fas fa-th-list"></i> MiniSplits Instalaciones
+            </button>
+
+            <div class="menu-section-title">EDUCACION y OTROS:</div>
+            
+            <button class="menu-item-btn" onclick="cargarSitio('http://fx1.mx', 'agente5', this)">
+                <i class="fas fa-th-list"></i> FX1 Academy
+            </button>
+
+            <button class="menu-item-btn" onclick="cargarSitio('https://laynatech.com', 'agente6', this)">
+                <i class="fas fa-th-list"></i> LaynaTech
+            </button>
+        </aside>
+
+        <main class="central-viewer">
+            <iframe id="central-frame" src="about:blank"></iframe>
+        </main>
+    </div>
+
+    <div id="chat-widget-container">
+        <div id="chat-window">
+            <div id="chat-header">
+                <span><i class="fas fa-robot"></i> SALES ROCKET SR</span>
+                <button onclick="toggleChat()" style="color: white; border: none; background: none; cursor: pointer;">&times;</button>
+            </div>
+            <iframe src="about:blank"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
